@@ -1,5 +1,5 @@
 // imports
-const { ethers, run, network } = require("hardhat");
+import { ethers, run, network } from "hardhat";
 
 // async main
 async function main() {
@@ -33,14 +33,14 @@ async function main() {
 // async function verify(contractAddress, args) {
 
 // declare with variable association
-const verify = async (contractAddress, args) => {
+const verify = async (contractAddress: string, args: any[]) => {
   console.log("Verifying contract...");
   try {
     await run("verify:verify", {
       address: contractAddress,
       constructorArgs: args,
     });
-  } catch (error) {
+  } catch (error: any) {
     if (error.message.includes("already verified")) {
       console.log("Already verified!");
     } else {

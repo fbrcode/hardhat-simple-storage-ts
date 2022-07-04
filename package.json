@@ -7,14 +7,15 @@
   "license": "MIT",
   "scripts": {
     "build": "hardhat compile",
-    "node": "hardhat node",
+    "run-node": "hardhat node",
     "clean": "hardhat clean",
-    "deploy:hardhat": "hardhat run scripts/deploy.js",
-    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
-    "deploy:rinkeby": "hardhat run scripts/deploy.js --network rinkeby",
+    "deploy:hardhat": "hardhat run scripts/deploy.ts",
+    "deploy:local": "hardhat run scripts/deploy.ts --network localhost",
+    "deploy:rinkeby": "hardhat run scripts/deploy.ts --network rinkeby",
     "block-number:rinkeby": "yarn hardhat block-number --network rinkeby",
     "test": "hardhat test",
-    "coverage": "hardhat coverage"
+    "coverage": "hardhat coverage",
+    "typechain": "hardhat typechain"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.0",

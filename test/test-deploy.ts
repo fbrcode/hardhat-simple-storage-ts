@@ -1,16 +1,20 @@
 // imports
-const { ethers } = require("hardhat");
-const { assert, expect } = require("chai");
+import { ethers } from "hardhat";
+import { assert, expect } from "chai";
+import { SimpleStorage, SimpleStorage__factory } from "../typechain-types";
+
 // describe("SimpleStorage", () => {}); // anonymous function notation #1
 // describe("SimpleStorage", function () {}); // anonymous function notation #2
 
 // describe() represents a test suite
 describe("SimpleStorage", () => {
-  let SimpleStorageFactory;
-  let simpleStorage;
+  let SimpleStorageFactory: SimpleStorage__factory;
+  let simpleStorage: SimpleStorage;
   // beforeEach() execute before each test
   beforeEach(async () => {
-    SimpleStorageFactory = await ethers.getContractFactory("SimpleStorage");
+    SimpleStorageFactory = (await ethers.getContractFactory(
+      "SimpleStorage"
+    )) as SimpleStorage__factory;
     simpleStorage = await SimpleStorageFactory.deploy();
   });
   // it() define a single test

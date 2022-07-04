@@ -1,8 +1,10 @@
-require("@nomiclabs/hardhat-waffle");
-require("dotenv").config();
-require("@nomiclabs/hardhat-etherscan");
-require("hardhat-gas-reporter");
-require("solidity-coverage");
+import "@nomiclabs/hardhat-waffle";
+import "dotenv/config";
+import "@nomiclabs/hardhat-etherscan";
+import "hardhat-gas-reporter";
+import "solidity-coverage";
+import "@nomiclabs/hardhat-ethers";
+import "@typechain/hardhat";
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -13,7 +15,7 @@ require("solidity-coverage");
 //     console.log(account.address);
 //   }
 // });
-require("./tasks/block-number");
+import "./tasks/block-number";
 
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more

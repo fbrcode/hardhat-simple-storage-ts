@@ -1,6 +1,9 @@
-const { task } = require("hardhat/config");
+import { task } from "hardhat/config";
 
-task("block-number", "Prints the current block number").setAction(
+export default task(
+  "block-number",
+  "Prints the current block number"
+).setAction(
   // named function declarations
   // const blockTask = async function() => {}
   // async function blockTask () {}
@@ -11,5 +14,3 @@ task("block-number", "Prints the current block number").setAction(
     console.log(`Current block number: ${blockNumber}`);
   }
 );
-
-module.exports = {};
