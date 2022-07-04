@@ -13,7 +13,8 @@
     "deploy:local": "hardhat run scripts/deploy.js --network localhost",
     "deploy:rinkeby": "hardhat run scripts/deploy.js --network rinkeby",
     "block-number:rinkeby": "yarn hardhat block-number --network rinkeby",
-    "test": "hardhat test"
+    "test": "hardhat test",
+    "coverage": "hardhat coverage"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.0",
@@ -26,6 +27,7 @@
     "hardhat": "^2.9.9",
     "hardhat-gas-reporter": "^1.0.8",
     "prettier": "^2.7.1",
-    "prettier-plugin-solidity": "^1.0.0-beta.19"
+    "prettier-plugin-solidity": "^1.0.0-beta.19",
+    "solidity-coverage": "^0.7.21"
   }
 }

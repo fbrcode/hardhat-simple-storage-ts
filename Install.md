@@ -47,3 +47,11 @@ Extension that tell us how much GAS we are spending.
 <https://www.npmjs.com/package/hardhat-gas-reporter>
 
 Install: `yarn add --dev hardhat-gas-reporter`
+
+## Code coverage
+
+Tells which lines are not covered by tests.
+
+Install: `yarn add --dev solidity-coverage`
+
+Call `yarn hardhat coverage`

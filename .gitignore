@@ -4,6 +4,8 @@ coverage
 coverage.json
 typechain
 *.log
+coverage
+coverage.json
 
 #Hardhat files
 cache
