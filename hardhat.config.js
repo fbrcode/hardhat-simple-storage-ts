@@ -17,10 +17,11 @@ require("./tasks/block-number");
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
 
-const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL;
-const PRIVATE_KEY = process.env.PRIVATE_KEY;
-const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
-const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY;
+// get env variables with fallback options
+const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL || "https://eth-rinkeby";
+const PRIVATE_KEY = process.env.PRIVATE_KEY || "0xKey";
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "key";
+const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || "key";
 
 /**
  * @type import('hardhat/config').HardhatUserConfig
@@ -44,5 +45,6 @@ module.exports = {
     noColors: true,
     currency: "USD",
     coinmarketcap: COINMARKETCAP_API_KEY,
+    // token: "MATIC", // how much it costs to deploy/run on polygon
   },
 };
