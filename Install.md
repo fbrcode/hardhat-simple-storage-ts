@@ -39,3 +39,11 @@ Type ".help" for more information.
 Previous hacks and how they got hacked: <https://rekt.news/leaderboard/>
 
 Implement tests coverage to avoid it. Hardhat used **Mocha** framework to implement tests.
+
+## Hardhat Gas Reporter
+
+Extension that tell us how much GAS we are spending.
+
+<https://www.npmjs.com/package/hardhat-gas-reporter>
+
+Install: `yarn add --dev hardhat-gas-reporter`
