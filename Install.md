@@ -55,3 +55,9 @@ Tells which lines are not covered by tests.
 Install: `yarn add --dev solidity-coverage`
 
 Call `yarn hardhat coverage`
+
+## Typescript your JS code
+
+Installing typescript packages:
+
+`yarn add --dev @typechain/ethers-v5 @typechain/hardhat @types/chai @types/node @types/mocha ts-node typechain typescript`
