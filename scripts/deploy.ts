@@ -38,7 +38,7 @@ const verify = async (contractAddress: string, args: any[]) => {
   try {
     await run("verify:verify", {
       address: contractAddress,
-      constructorArgs: args,
+      constructorArguments: args,
     });
   } catch (error: any) {
     if (error.message.includes("already verified")) {
